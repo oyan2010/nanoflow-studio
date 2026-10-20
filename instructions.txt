@@ -1,0 +1,70 @@
+hello i made this project long ago and stop it due to lack of some tools and apis which works first but after stops after creating this
+now what its condition now it generates images in bulk or single and generate videos as single or in bulk i also add the shedule but it does not works and failed lot of issues.
+analytic tabs dont has the history.
+user videos, images and entered prompts are not saved properly now i am integrating 3 setups for it in which 
+we use python + typescript and mera PC as server act kare ga isme pehle cookies wala scene tha ke cookies se videos bnti thi but ab hum system bnaye ga jisme hum apni device se aik public apis 
+nikale ga with authentication token so in future if i sell that apis so i give the tokens also it secures it
+which requests our pc now our device do:
+Main Points:
+    User can choose a plan enter the details as previous i get the rcipt of payment which uploads on imagebb and it recives me on my admin mail
+    we shall use my gmail password for sending emails to users for notifying, for their otps and other marketing options it sents from our pc
+    user register enter email and click send otp then that requests recieves on our laptop and it sends an otp to our website and the on user email user enter code and successfully register his acount.
+    then user will wait for paymemnt approval when approves user get again notified. now he can login.
+    now how our text to image and video works i created @ts-automation folder in which a working project exist which uses typescript automation for creating images and videos
+    our laptop recieves requests from frontend of our project like generate single image and it sents image  details with the auth token which is api key with the request 
+    our app already initlized waiting for any image request seperately and videos seperately when image recieves it uses google flow to generate it and sends the image url to frontend which we get from google flow
+    we send to frontend if user wants to donload it download or if buk requests revieved then use Imagen 4 model (you get information from that project) then start generating images in 4 threads means 4 prompts paste seperately and waituntil completes as they complete extracts sends then next
+    (Here is i am confused how our device works or how our flow proceeds if multplie requests recieved)
+
+    we will use credit based system 1 Image = 0 credit, when use bulk tool and images more than 2 each costs about 1 credit.
+
+    Video Generation:
+    single video = 2 credits
+    Bulk video = each costs about 8 credits or if user use shedule feature and our system automatically generates videos of multple users gradually so system load is low so used credits are 6 and if user is ultra plan then 5 credits each video.
+    we use veo3.1 fast (Lower Proirity) which i can change from our website frontend admin.
+    flow for this is slighly changes it also has seperate server of ts-automation where videos requests we will proceed it generates 4 videos in parallel seamlessly but the difference is it scan videos url efficiently or if any failed add it to seperate queue and when all videos completed then failed tries but the sequence on our website remain same.
+    (in video generation our laptop use its processing power so i need to secure our laptop from over usage what we can do)
+
+    Voice Generation:
+    For this we use edge tts which is only available in python so this request also recieved on laptop and processed and then transfers the quota of per request is 15,000k voice credits.
+    as in this no usage consumed by our pc so we can process multiple requests.
+
+
+    Pricing Plan Structure:
+    No Free trial
+    Pay as you go model completely
+    3 plans and 1 is custom plan
+        🟢 Starter — 1500 PKR
+800–1200 scheduled videos/month
+50 fast videos/month
+2000–3000 images/month
+Standard queue
+Basic speed
+
+👉 Daily numbers remove → abuse control
+
+🔵 Premium — 2500 PKR (main plan)
+4000–5000 scheduled videos/month
+200 fast videos/month
+10,000 images/month
+Faster queue
+Scheduling priority
+
+👉 Ye tumhara “Most Popular” hona chahiye
+
+🟣 Ultra — 4000 PKR
+10,000+ scheduled videos/month (fair use)
+500 fast videos/month
+25,000 images/month
+Highest priority queue
+Fastest processing
+
+Website ke requesting mechanism and login me change karna ha baki @ts-automation wali dir hamara server ha jo non stop run ho ga 24/7:
+Slot 1 → always Instant jobs
+Slot 2 → Instant / Premium
+Slot 3 → Scheduled
+Slot 4 → Scheduled
+
+and mujhe clearity chaye ke agar hum aik browser me multiple tabs chlaye wo best ha and 2. inki working file seperate rskhe  and ya hum multiple browsers chlaye?
+
+@ts-automation kaafi had tak working ha

@@ -1,0 +1,50 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime and build
+dist/
+dist-ssr/
+build/
+node_modules/
+.netlify/
+.lovable/
+scratch/
+
+# Environments and Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+*.token
+*.key
+TOKEN.txt
+cookies.json
+requests.json
+tasks.json
+
+# Giant files and Archives (Bans 241MB rar)
+*.rar
+*.zip
+*.7z
+*.mp3
+*.mp4
+*.wav
+
+# Supabase Backend & Database Migrations (PRIVATE)
+supabase/
+
+# Automation user data and outputs
+ts-automation/.env
+ts-automation/user_data/
+ts-automation/output/
+ts-automation/scratch/
+ts-automation/*.rar
+ts-automation/*.json
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+nanoflow_opencode1-session.md

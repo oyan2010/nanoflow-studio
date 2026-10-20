@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Automator Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <main class="dashboard">
+        <header>
+            <h1>Flow <span>Automator</span></h1>
+            <div class="status-badge" id="engine-status">Engine Online</div>
+        </header>
+
+        <div class="grid">
+            <!-- Left: New Task Form -->
+            <section class="card glass-card">
+                <h2>New Generation</h2>
+                <form id="gen-form">
+                    <div class="input-group">
+                        <label>Type</label>
+                        <select id="type">
+                            <option value="VIDEO">Video</option>
+                            <option value="IMAGE">Image</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Prompt</label>
+                        <textarea id="prompt" placeholder="Describe your vision..." required></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Model</label>
+                            <select id="model">
+                                <option value="Veo 3.1 - Lite">Veo 3.1 - Lite</option>
+                                <option value="Veo 3.1 - Fast">Veo 3.1 - Fast</option>
+                                <option value="Nano Banana 2">Nano Banana 2</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Ratio</label>
+                            <select id="ratio">
+                                <option value="16_9">16:9</option>
+                                <option value="9_16">9:16</option>
+                                <option value="1_1">1:1</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Add to Queue</button>
+                </form>
+            </section>
+
+            <!-- Right: Task Queue & Cookies -->
+            <div class="right-stack">
+                <section class="card glass-card scrollbox">
+                    <h2>Live Queue</h2>
+                    <div id="task-list" class="task-list">
+                        <!-- Tasks will appear here -->
+                        <div class="empty-state">No tasks in queue</div>
+                    </div>
+                </section>
+
+                <section class="card glass-card">
+                    <h2>Settings</h2>
+                    <div class="input-group">
+                        <label class="toggle-container">
+                            <span>Headless Mode</span>
+                            <input type="checkbox" id="headless-toggle">
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label>Automation Speed (Delay)</label>
+                        <select id="delay-speed">
+                            <option value="5000">Normal (5s)</option>
+                            <option value="8000">Slow (8s)</option>
+                            <option value="2000">Fast (2s)</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="card glass-card">
+                    <h2>Session Manager</h2>
+                    <textarea id="cookies" placeholder='Paste cookies JSON here [ { "name": "...", "value": "..." } ]'></textarea>
+                    <button id="update-cookies" class="btn-secondary">Update Session</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
